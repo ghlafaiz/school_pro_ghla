@@ -1,257 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="ar" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
+
+    <title>استبانات</title>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+
         body {
+
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #f4efe4, #e2d1c3);
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+
+            background-color: #f9f9f9;
+
+            direction: rtl;
+
+            text-align: right;
+
             padding: 20px;
+
         }
-        .header {
-            position: relative;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .header img {
-            width: 50px;
-            height: auto;
-            border-radius: 4px;
-        }
+
+       
+
         .form-container {
-            width: 100%;
-            max-width: 800px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+
+            max-width: 600px;
+
             margin: auto;
-            animation: fadeIn 1s ease-in-out;
+
+            background: white;
+
+            padding: 20px;
+
+            border-radius: 5px;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+
+       
+
         h1 {
+
             text-align: center;
-            margin-bottom: 20px;
-            color: #b30c0c;
+
+            color: #333;
+
         }
-        .form-group, .question {
-            margin-bottom: 20px;
+
+       
+
+        .form-group {
+
+            margin-bottom: 15px;
+
         }
+
+       
+
         label {
+
             display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
+
+            margin-bottom: 5px;
+
+            color: #555;
+
         }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        .question-options {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .option {
-            flex: 1 1 calc(33.333% - 10px);
-            background-color: #f0f0f0;
-            padding: 15px;
-            text-align: center;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-        .option input {
-            position: absolute;
-            opacity: 0;
-        }
-        .option:hover, .option.selected {
-            background-color: #c42c2c;
-            color: white;
-            transform: scale(1.05);
-        }
+
+       
+
+        input[type="text"],
+
         button {
-            display: block;
+
             width: 100%;
-            padding: 12px;
-            background-color: #c42c2c;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #7d1f1f;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
+
             padding: 10px;
-            font-size: 14px;
-            color: #c42c2c;
-            background: #fefefe;
-            border-radius: 9px;
+
+            margin-top: 5px;
+
+            border-radius: 5px;
+
+            border: 1px solid #ccc;
+
         }
+
+       
+
+        button {
+
+            background-color: #28a745;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+        }
+
+       
+
+        button:hover {
+
+            background-color: #218838;
+
+        }
+
+       
+
     </style>
+
 </head>
+
 <body>
-    <div class="header">
-        <img src="photo_2024-12-22_14-23-27.jpg" alt="Logo">
-    </div>
 
     <div class="form-container">
+
         <h1>استبانات</h1>
-        <form id="surveyForm">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
 
-            <div class="form-group">
-                <label for="class">Class:</label>
-                <input type="text" id="class" name="class" placeholder="Enter your Class" required>
-            </div>
+<form id="surveyForm" method="POST" action="https://script.google.com/macros/s/AKfycbx-j8dCaTl3W6AfU2c-9T49tHnztDea1gJMMgHVS1yaXfBx_Io7Qsjh1MMa5AJL7C-7/exec">
 
-            <!-- Question 1 -->
-            <div class="question">
-                <label>1. ماهي لغتك الأم؟</label>
-                <div class="question-options">
-                    <div class="option"><input type="radio" name="q1" value="العربية" required> العربية</div>
-                    <div class="option"><input type="radio" name="q1" value="الإنجليزية" required> الإنجليزية</div>
-                </div>
-            </div>
+    <div class="form-group">
 
-            <!-- Question 2 -->
-            <div class="question">
-                <label>2. هل لديك معرفة سابقة باللغة الصينية؟</label>
-                <div class="question-options">
-                    <div class="option"><input type="radio" name="q2" value="نعم" required> نعم</div>
-                    <div class="option"><input type="radio" name="q2" value="لا" required> لا</div>
-                </div>
-            </div>
+        <label for="name">Name:</label>
 
-            <!-- Question 3 -->
-            <div class="question">
-                <label>3. ما هو سبب اهتمامك بتعلم اللغة الصينية؟</label>
-                <div class="question-options">
-                    <div class="option"><input type="radio" name="q3" value="العمل" required> العمل</div>
-                    <div class="option"><input type="radio" name="q3" value="الدراسة" required> الدراسة</div>
-                    <div class="option"><input type="radio" name="q3" value="السفر" required> السفر</div>
-                </div>
-            </div>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <!-- Question 4 -->
-            <div class="question">
-                <label>4. ما هي طريقة التعلم المفضلة لديك؟</label>
-                <div class="question-options">
-                    <div class="option"><input type="radio" name="q4" value="الدروس التقليدية" required> الدروس التقليدية</div>
-                    <div class="option"><input type="radio" name="q4" value="التعلم الذاتي" required> التعلم الذاتي</div>
-                    <div class="option"><input type="radio" name="q4" value="الدورات عبر الإنترنت" required> الدورات عبر الإنترنت</div>
-                </div>
-            </div>
-
-            <!-- Question 5 -->
-            <div class="question">
-                <label>5. هل لديك اي موارد او مواد تعليمية مفضلة؟</label>
-                <div class="question-options">
-                    <div class="option"><input type="radio" name="q5" value="كتب" required> كتب</div>
-                    <div class="option"><input type="radio" name="q5" value="مواقع الكترونية" required> مواقع الكترونية</div>
-                    <div class="option"><input type="radio" name="q5" value="قنوات اليوتيوب" required> قنوات اليوتيوب</div>
-                </div>
-            </div>
-            <label>6. كم من الوقت تخطط لتخصيصه لتعلم اللغه الصينيه اسبوعيا؟</label>
-            <div class="question-options">
-                <div class="option"><input type="radio" name="q3" value="العمل" required> اقل من ساعه</div>
-                <div class="option"><input type="radio" name="q3" value="الدراسة" required> 1-3 ساعات</div>
-                <div class="option"><input type="radio" name="q3" value="السفر" required> 3-5 ساعات</div>
-            </div>
-        </div>
-            
-            <div class="form-group">
-                <label for="comments"></label>
-                <input type="text" id="comments" name="comments" placeholder="اكتب ملاحظاتك هنا" required>
-            </div>
-          
-            <button type="submit">Submit</button>
-        </form>
     </div>
 
-    <footer>© منصة التنين</footer>
+
+    <div class="form-group">
+
+        <label for="class">Class:</label>
+
+        <input type="text" id="class" name="class" placeholder="Enter your Class" required>
+
+    </div>
+
+
+    <div class="question">
+
+        <label>1. ماهي لغتك الأم؟</label>
+
+        <div>
+
+            <input type="radio" name="q1" value="العربية" required> العربية
+
+            <input type="radio" name="q1" value="الإنجليزية" required> الإنجليزية
+
+        </div>
+
+    </div>
+
+
+            <div class="question">
+
+                <label>2. هل لديك معرفة سابقة باللغة الصينية؟</label>
+
+                <div class="question-options">
+
+                    <div class="option"><input type="radio" name="q2" value="نعم" required> نعم</div>
+
+                    <div class="option"><input type="radio" name="q2" value="لا" required> لا</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="question">
+
+                <label>3. ما هو سبب اهتمامك بتعلم اللغة الصينية؟</label>
+
+                <div class="question-options">
+
+                    <div class="option"><input type="radio" name="q3" value="العمل" required> العمل</div>
+
+                    <div class="option"><input type="radio" name="q3" value="الدراسة" required> الدراسة</div>
+
+                    <div class="option"><input type="radio" name="q3" value="السفر" required> السفر</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="question">
+
+                <label>4. ما هي طريقة التعلم المفضلة لديك؟</label>
+
+                <div class="question-options">
+
+                    <div class="option"><input type="radio" name="q4" value="الدروس التقليدية" required> الدروس التقليدية</div>
+
+                    <div class="option"><input type="radio" name="q4" value="التعلم الذاتي" required> التعلم الذاتي</div>
+
+                    <div class="option"><input type="radio" name="q4" value="الدورات عبر الإنترنت" required> الدورات عبر الإنترنت</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="question">
+
+                <label>5. كم من الوقت تخطط لتخصيصه لتعلم اللغة الصينية أسبوعياً؟</label>
+
+                <div class="question-options">
+
+                    <div class="option"><input type="radio" name="q5" value="أقل من ساعة" required> أقل من ساعة</div>
+
+                    <div class="option"><input type="radio" name="q5" value="1-3 ساعات" required> 1-3 ساعات</div>
+
+                    <div class="option"><input type="radio" name="q5" value="أكثر من 5 ساعات" required> أكثر من 5 ساعات</div>
+
+                </div>
+
+            </div>
+
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
 
     <script>
-        const form = document.getElementById('surveyForm');
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+        document.getElementById("surveyForm").addEventListener("submit", async function (e) {
 
-            // جمع البيانات من النموذج
-            const formData = new FormData(form);
-            const entries = Object.fromEntries(formData.entries());
+            e.preventDefault(); // Prevent default form submission
 
-            // رابط Google Apps Script
-            const googleSheetUrl = "https://script.google.com/macros/s/AKfycbyW0YInzzDma-GFJy2PygeATMbtOBpfDmiUEJqkXYqqXK7DSPrXc4RcAzDgjh8xHI1i/exec";
+         
 
-            // إرسال البيانات إلى Google Sheets
-            fetch(googleSheetUrl, {
-                method: 'POST',
+            // Collect form data
+
+            const formData = new FormData(e.target);
+
+         
+
+            // Convert form data to URL-encoded format
+
+            const data = new URLSearchParams();
+
+            formData.forEach((value, key) => {
+
+              data.append(key, value);
+
+            });
+
+         
+
+            try {
+
+              // Make a POST request to your Apps Script web app
+
+              const response = await fetch("https://script.google.com/macros/s/AKfycbx-j8dCaTl3W6AfU2c-9T49tHnztDea1gJMMgHVS1yaXfBx_Io7Qsjh1MMa5AJL7C-7/exec", {
+
+                method: "POST", // Ensures POST is used
+
                 headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
+
+                  "Content-Type": "application/x-www-form-urlencoded", // Set the content type
+
                 },
-                body: JSON.stringify(entries)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('تم إرسال الاستبيان بنجاح!');
-                form.reset(); // إعادة تعيين النموذج بعد إرسال البيانات
-            })
-            .catch(error => {
-                alert('حدث خطأ أثناء إرسال البيانات.');
-            });
-        });
 
-        // تحسين التفاعل مع الخيارات
-        const options = document.querySelectorAll('.option');
+                body: data, // Send the form data
 
-        options.forEach(option => {
-            option.addEventListener('click', () => {
-                const input = option.querySelector('input');
-                if (input) {
-                    input.checked = true; // تحديد العنصر الإذاعي
-                }
+              });
 
-                // إزالة التحديد من الخيارات الأخرى داخل نفس السؤال
-                const siblings = option.parentElement.querySelectorAll('.option');
-                siblings.forEach(sibling => sibling.classList.remove('selected'));
+         
 
-                // إضافة التحديد إلى العنصر الحالي
-                option.classList.add('selected');
-            });
-        });
+              // Parse the JSON response
+
+              const result = await response.json();
+
+              console.log(result);
+
+         
+
+              if (result.status === "success") {
+
+                alert("Form submitted successfully!");
+
+              } else {
+
+                alert("Error: " + result.message);
+
+              }
+
+            } catch (error) {
+
+              console.error("Error submitting form:", error);
+
+              alert("Failed to submit the form. Please try again.");
+
+            }
+
+          });
+
+         
+
     </script>
+
 </body>
+
 </html>
